@@ -35,15 +35,7 @@ The codebase is modular and readable:
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    C[Client] -->|POST /shorten| A[FastAPI App]
-    C -->|GET /urls| A
-    C -->|GET /{code}| A
-    A --> U[utils.py<br/>Validation + Base62]
-    A --> D[database.py<br/>SQLite queries]
-    D --> S[(SQLite DB)]
-```
+![Architecture Diagram](images/architecture.png)
 
 ### Architecture Notes
 
